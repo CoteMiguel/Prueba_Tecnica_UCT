@@ -1,0 +1,230 @@
+[21-Apr-2026 15:47:18 Europe/Berlin] PHP Fatal error:  Uncaught Error: Undefined constant "SQLSRV_ASSOC" in C:\xampp\htdocs\Prueba_Tecnica_UCT\backend\models\Solicitud.php:82
+Stack trace:
+#0 C:\xampp\htdocs\Prueba_Tecnica_UCT\backend\controllers\Solicitudcontroller.php(74): Solicitud->filtrar('', 'Pendiente', '1')
+#1 C:\xampp\htdocs\Prueba_Tecnica_UCT\backend\index.php(41): SolicitudController->filtrarSolicitudes()
+#2 {main}
+  thrown in C:\xampp\htdocs\Prueba_Tecnica_UCT\backend\models\Solicitud.php on line 82
+[21-Apr-2026 15:47:19 Europe/Berlin] PHP Fatal error:  Uncaught Error: Undefined constant "SQLSRV_ASSOC" in C:\xampp\htdocs\Prueba_Tecnica_UCT\backend\models\Solicitud.php:82
+Stack trace:
+#0 C:\xampp\htdocs\Prueba_Tecnica_UCT\backend\controllers\Solicitudcontroller.php(74): Solicitud->filtrar('', 'En revisi\xC3\xB3n', '1')
+#1 C:\xampp\htdocs\Prueba_Tecnica_UCT\backend\index.php(41): SolicitudController->filtrarSolicitudes()
+#2 {main}
+  thrown in C:\xampp\htdocs\Prueba_Tecnica_UCT\backend\models\Solicitud.php on line 82
+[21-Apr-2026 15:47:47 Europe/Berlin] PHP Fatal error:  Uncaught Error: Undefined constant "SQLSRV_ASSOC" in C:\xampp\htdocs\Prueba_Tecnica_UCT\backend\models\Solicitud.php:82
+Stack trace:
+#0 C:\xampp\htdocs\Prueba_Tecnica_UCT\backend\controllers\Solicitudcontroller.php(74): Solicitud->filtrar('', '', '2')
+#1 C:\xampp\htdocs\Prueba_Tecnica_UCT\backend\index.php(41): SolicitudController->filtrarSolicitudes()
+#2 {main}
+  thrown in C:\xampp\htdocs\Prueba_Tecnica_UCT\backend\models\Solicitud.php on line 82
+[21-Apr-2026 15:47:52 Europe/Berlin] PHP Fatal error:  Uncaught Error: Undefined constant "SQLSRV_ASSOC" in C:\xampp\htdocs\Prueba_Tecnica_UCT\backend\models\Solicitud.php:82
+Stack trace:
+#0 C:\xampp\htdocs\Prueba_Tecnica_UCT\backend\controllers\Solicitudcontroller.php(74): Solicitud->filtrar('', '', '3')
+#1 C:\xampp\htdocs\Prueba_Tecnica_UCT\backend\index.php(41): SolicitudController->filtrarSolicitudes()
+#2 {main}
+  thrown in C:\xampp\htdocs\Prueba_Tecnica_UCT\backend\models\Solicitud.php on line 82
+[21-Apr-2026 15:47:54 Europe/Berlin] PHP Fatal error:  Uncaught Error: Undefined constant "SQLSRV_ASSOC" in C:\xampp\htdocs\Prueba_Tecnica_UCT\backend\models\Solicitud.php:82
+Stack trace:
+#0 C:\xampp\htdocs\Prueba_Tecnica_UCT\backend\controllers\Solicitudcontroller.php(74): Solicitud->filtrar('', 'Pendiente', '3')
+#1 C:\xampp\htdocs\Prueba_Tecnica_UCT\backend\index.php(41): SolicitudController->filtrarSolicitudes()
+#2 {main}
+  thrown in C:\xampp\htdocs\Prueba_Tecnica_UCT\backend\models\Solicitud.php on line 82
+[21-Apr-2026 15:47:56 Europe/Berlin] PHP Fatal error:  Uncaught Error: Undefined constant "SQLSRV_ASSOC" in C:\xampp\htdocs\Prueba_Tecnica_UCT\backend\models\Solicitud.php:82
+Stack trace:
+#0 C:\xampp\htdocs\Prueba_Tecnica_UCT\backend\controllers\Solicitudcontroller.php(74): Solicitud->filtrar('a', 'Pendiente', '3')
+#1 C:\xampp\htdocs\Prueba_Tecnica_UCT\backend\index.php(41): SolicitudController->filtrarSolicitudes()
+#2 {main}
+  thrown in C:\xampp\htdocs\Prueba_Tecnica_UCT\backend\models\Solicitud.php on line 82
+[21-Apr-2026 15:47:56 Europe/Berlin] PHP Fatal error:  Uncaught Error: Undefined constant "SQLSRV_ASSOC" in C:\xampp\htdocs\Prueba_Tecnica_UCT\backend\models\Solicitud.php:82
+Stack trace:
+#0 C:\xampp\htdocs\Prueba_Tecnica_UCT\backend\controllers\Solicitudcontroller.php(74): Solicitud->filtrar('as', 'Pendiente', '3')
+#1 C:\xampp\htdocs\Prueba_Tecnica_UCT\backend\index.php(41): SolicitudController->filtrarSolicitudes()
+#2 {main}
+  thrown in C:\xampp\htdocs\Prueba_Tecnica_UCT\backend\models\Solicitud.php on line 82
+[21-Apr-2026 15:47:57 Europe/Berlin] PHP Fatal error:  Uncaught Error: Undefined constant "SQLSRV_ASSOC" in C:\xampp\htdocs\Prueba_Tecnica_UCT\backend\models\Solicitud.php:82
+Stack trace:
+#0 C:\xampp\htdocs\Prueba_Tecnica_UCT\backend\controllers\Solicitudcontroller.php(74): Solicitud->filtrar('asq', 'Pendiente', '3')
+#1 C:\xampp\htdocs\Prueba_Tecnica_UCT\backend\index.php(41): SolicitudController->filtrarSolicitudes()
+#2 {main}
+  thrown in C:\xampp\htdocs\Prueba_Tecnica_UCT\backend\models\Solicitud.php on line 82
+[21-Apr-2026 15:48:01 Europe/Berlin] PHP Fatal error:  Uncaught Error: Undefined constant "SQLSRV_ASSOC" in C:\xampp\htdocs\Prueba_Tecnica_UCT\backend\models\Solicitud.php:82
+Stack trace:
+#0 C:\xampp\htdocs\Prueba_Tecnica_UCT\backend\controllers\Solicitudcontroller.php(74): Solicitud->filtrar('', 'Pendiente', '3')
+#1 C:\xampp\htdocs\Prueba_Tecnica_UCT\backend\index.php(41): SolicitudController->filtrarSolicitudes()
+#2 {main}
+  thrown in C:\xampp\htdocs\Prueba_Tecnica_UCT\backend\models\Solicitud.php on line 82
+[21-Apr-2026 15:50:04 Europe/Berlin] PHP Fatal error:  Uncaught Error: Undefined constant "SQLSRV_ASSOC" in C:\xampp\htdocs\Prueba_Tecnica_UCT\backend\models\Solicitud.php:82
+Stack trace:
+#0 C:\xampp\htdocs\Prueba_Tecnica_UCT\backend\controllers\Solicitudcontroller.php(74): Solicitud->filtrar('', '', '2')
+#1 C:\xampp\htdocs\Prueba_Tecnica_UCT\backend\index.php(41): SolicitudController->filtrarSolicitudes()
+#2 {main}
+  thrown in C:\xampp\htdocs\Prueba_Tecnica_UCT\backend\models\Solicitud.php on line 82
+[21-Apr-2026 15:51:29 Europe/Berlin] PHP Fatal error:  Uncaught Error: Undefined constant "SQLSRV_ASSOC" in C:\xampp\htdocs\Prueba_Tecnica_UCT\backend\models\Solicitud.php:82
+Stack trace:
+#0 C:\xampp\htdocs\Prueba_Tecnica_UCT\backend\controllers\Solicitudcontroller.php(74): Solicitud->filtrar('', 'Pendiente', '1')
+#1 C:\xampp\htdocs\Prueba_Tecnica_UCT\backend\index.php(41): SolicitudController->filtrarSolicitudes()
+#2 {main}
+  thrown in C:\xampp\htdocs\Prueba_Tecnica_UCT\backend\models\Solicitud.php on line 82
+[21-Apr-2026 15:51:57 Europe/Berlin] PHP Fatal error:  Uncaught Error: Undefined constant "SQLSRV_ASSOC" in C:\xampp\htdocs\Prueba_Tecnica_UCT\backend\models\Solicitud.php:82
+Stack trace:
+#0 C:\xampp\htdocs\Prueba_Tecnica_UCT\backend\controllers\Solicitudcontroller.php(74): Solicitud->filtrar('', '', '2')
+#1 C:\xampp\htdocs\Prueba_Tecnica_UCT\backend\index.php(41): SolicitudController->filtrarSolicitudes()
+#2 {main}
+  thrown in C:\xampp\htdocs\Prueba_Tecnica_UCT\backend\models\Solicitud.php on line 82
+[21-Apr-2026 15:52:11 Europe/Berlin] PHP Fatal error:  Uncaught Error: Undefined constant "SQLSRV_ASSOC" in C:\xampp\htdocs\Prueba_Tecnica_UCT\backend\models\Solicitud.php:82
+Stack trace:
+#0 C:\xampp\htdocs\Prueba_Tecnica_UCT\backend\controllers\Solicitudcontroller.php(74): Solicitud->filtrar('', 'Pendiente', '2')
+#1 C:\xampp\htdocs\Prueba_Tecnica_UCT\backend\index.php(41): SolicitudController->filtrarSolicitudes()
+#2 {main}
+  thrown in C:\xampp\htdocs\Prueba_Tecnica_UCT\backend\models\Solicitud.php on line 82
+[21-Apr-2026 15:52:15 Europe/Berlin] PHP Fatal error:  Uncaught Error: Undefined constant "SQLSRV_ASSOC" in C:\xampp\htdocs\Prueba_Tecnica_UCT\backend\models\Solicitud.php:82
+Stack trace:
+#0 C:\xampp\htdocs\Prueba_Tecnica_UCT\backend\controllers\Solicitudcontroller.php(74): Solicitud->filtrar('', 'En revisi\xC3\xB3n', '1')
+#1 C:\xampp\htdocs\Prueba_Tecnica_UCT\backend\index.php(41): SolicitudController->filtrarSolicitudes()
+#2 {main}
+  thrown in C:\xampp\htdocs\Prueba_Tecnica_UCT\backend\models\Solicitud.php on line 82
+[21-Apr-2026 15:52:38 Europe/Berlin] PHP Fatal error:  Uncaught Error: Undefined constant "SQLSRV_ASSOC" in C:\xampp\htdocs\Prueba_Tecnica_UCT\backend\models\Solicitud.php:82
+Stack trace:
+#0 C:\xampp\htdocs\Prueba_Tecnica_UCT\backend\controllers\Solicitudcontroller.php(74): Solicitud->filtrar('', 'Pendiente', '1')
+#1 C:\xampp\htdocs\Prueba_Tecnica_UCT\backend\index.php(41): SolicitudController->filtrarSolicitudes()
+#2 {main}
+  thrown in C:\xampp\htdocs\Prueba_Tecnica_UCT\backend\models\Solicitud.php on line 82
+[21-Apr-2026 15:53:15 Europe/Berlin] PHP Fatal error:  Uncaught Error: Undefined constant "SQLSRV_ASSOC" in C:\xampp\htdocs\Prueba_Tecnica_UCT\backend\models\Solicitud.php:82
+Stack trace:
+#0 C:\xampp\htdocs\Prueba_Tecnica_UCT\backend\controllers\Solicitudcontroller.php(74): Solicitud->filtrar('', 'En revisi\xC3\xB3n', '1')
+#1 C:\xampp\htdocs\Prueba_Tecnica_UCT\backend\index.php(41): SolicitudController->filtrarSolicitudes()
+#2 {main}
+  thrown in C:\xampp\htdocs\Prueba_Tecnica_UCT\backend\models\Solicitud.php on line 82
+[21-Apr-2026 15:53:20 Europe/Berlin] PHP Fatal error:  Uncaught Error: Undefined constant "SQLSRV_ASSOC" in C:\xampp\htdocs\Prueba_Tecnica_UCT\backend\models\Solicitud.php:82
+Stack trace:
+#0 C:\xampp\htdocs\Prueba_Tecnica_UCT\backend\controllers\Solicitudcontroller.php(74): Solicitud->filtrar('k', 'En revisi\xC3\xB3n', '1')
+#1 C:\xampp\htdocs\Prueba_Tecnica_UCT\backend\index.php(41): SolicitudController->filtrarSolicitudes()
+#2 {main}
+  thrown in C:\xampp\htdocs\Prueba_Tecnica_UCT\backend\models\Solicitud.php on line 82
+[21-Apr-2026 15:53:20 Europe/Berlin] PHP Fatal error:  Uncaught Error: Undefined constant "SQLSRV_ASSOC" in C:\xampp\htdocs\Prueba_Tecnica_UCT\backend\models\Solicitud.php:82
+Stack trace:
+#0 C:\xampp\htdocs\Prueba_Tecnica_UCT\backend\controllers\Solicitudcontroller.php(74): Solicitud->filtrar('kj', 'En revisi\xC3\xB3n', '1')
+#1 C:\xampp\htdocs\Prueba_Tecnica_UCT\backend\index.php(41): SolicitudController->filtrarSolicitudes()
+#2 {main}
+  thrown in C:\xampp\htdocs\Prueba_Tecnica_UCT\backend\models\Solicitud.php on line 82
+[21-Apr-2026 15:53:20 Europe/Berlin] PHP Fatal error:  Uncaught Error: Undefined constant "SQLSRV_ASSOC" in C:\xampp\htdocs\Prueba_Tecnica_UCT\backend\models\Solicitud.php:82
+Stack trace:
+#0 C:\xampp\htdocs\Prueba_Tecnica_UCT\backend\controllers\Solicitudcontroller.php(74): Solicitud->filtrar('kjs', 'En revisi\xC3\xB3n', '1')
+#1 C:\xampp\htdocs\Prueba_Tecnica_UCT\backend\index.php(41): SolicitudController->filtrarSolicitudes()
+#2 {main}
+  thrown in C:\xampp\htdocs\Prueba_Tecnica_UCT\backend\models\Solicitud.php on line 82
+[21-Apr-2026 15:53:20 Europe/Berlin] PHP Fatal error:  Uncaught Error: Undefined constant "SQLSRV_ASSOC" in C:\xampp\htdocs\Prueba_Tecnica_UCT\backend\models\Solicitud.php:82
+Stack trace:
+#0 C:\xampp\htdocs\Prueba_Tecnica_UCT\backend\controllers\Solicitudcontroller.php(74): Solicitud->filtrar('kjso', 'En revisi\xC3\xB3n', '1')
+#1 C:\xampp\htdocs\Prueba_Tecnica_UCT\backend\index.php(41): SolicitudController->filtrarSolicitudes()
+#2 {main}
+  thrown in C:\xampp\htdocs\Prueba_Tecnica_UCT\backend\models\Solicitud.php on line 82
+[21-Apr-2026 15:53:23 Europe/Berlin] PHP Fatal error:  Uncaught Error: Undefined constant "SQLSRV_ASSOC" in C:\xampp\htdocs\Prueba_Tecnica_UCT\backend\models\Solicitud.php:82
+Stack trace:
+#0 C:\xampp\htdocs\Prueba_Tecnica_UCT\backend\controllers\Solicitudcontroller.php(74): Solicitud->filtrar('', 'En revisi\xC3\xB3n', '1')
+#1 C:\xampp\htdocs\Prueba_Tecnica_UCT\backend\index.php(41): SolicitudController->filtrarSolicitudes()
+#2 {main}
+  thrown in C:\xampp\htdocs\Prueba_Tecnica_UCT\backend\models\Solicitud.php on line 82
+[21-Apr-2026 15:53:25 Europe/Berlin] PHP Fatal error:  Uncaught Error: Undefined constant "SQLSRV_ASSOC" in C:\xampp\htdocs\Prueba_Tecnica_UCT\backend\models\Solicitud.php:82
+Stack trace:
+#0 C:\xampp\htdocs\Prueba_Tecnica_UCT\backend\controllers\Solicitudcontroller.php(74): Solicitud->filtrar('', 'En revisi\xC3\xB3n', '2')
+#1 C:\xampp\htdocs\Prueba_Tecnica_UCT\backend\index.php(41): SolicitudController->filtrarSolicitudes()
+#2 {main}
+  thrown in C:\xampp\htdocs\Prueba_Tecnica_UCT\backend\models\Solicitud.php on line 82
+[21-Apr-2026 15:53:29 Europe/Berlin] PHP Fatal error:  Uncaught Error: Undefined constant "SQLSRV_ASSOC" in C:\xampp\htdocs\Prueba_Tecnica_UCT\backend\models\Solicitud.php:82
+Stack trace:
+#0 C:\xampp\htdocs\Prueba_Tecnica_UCT\backend\controllers\Solicitudcontroller.php(74): Solicitud->filtrar('', 'Pendiente', '2')
+#1 C:\xampp\htdocs\Prueba_Tecnica_UCT\backend\index.php(41): SolicitudController->filtrarSolicitudes()
+#2 {main}
+  thrown in C:\xampp\htdocs\Prueba_Tecnica_UCT\backend\models\Solicitud.php on line 82
+[21-Apr-2026 15:54:15 Europe/Berlin] PHP Fatal error:  Uncaught Error: Undefined constant "SQLSRV_ASSOC" in C:\xampp\htdocs\Prueba_Tecnica_UCT\backend\models\Solicitud.php:82
+Stack trace:
+#0 C:\xampp\htdocs\Prueba_Tecnica_UCT\backend\controllers\Solicitudcontroller.php(76): Solicitud->filtrar('', '', '1')
+#1 C:\xampp\htdocs\Prueba_Tecnica_UCT\backend\index.php(41): SolicitudController->filtrarSolicitudes()
+#2 {main}
+  thrown in C:\xampp\htdocs\Prueba_Tecnica_UCT\backend\models\Solicitud.php on line 82
+[21-Apr-2026 15:54:17 Europe/Berlin] PHP Fatal error:  Uncaught Error: Undefined constant "SQLSRV_ASSOC" in C:\xampp\htdocs\Prueba_Tecnica_UCT\backend\models\Solicitud.php:82
+Stack trace:
+#0 C:\xampp\htdocs\Prueba_Tecnica_UCT\backend\controllers\Solicitudcontroller.php(76): Solicitud->filtrar('', '', '1')
+#1 C:\xampp\htdocs\Prueba_Tecnica_UCT\backend\index.php(41): SolicitudController->filtrarSolicitudes()
+#2 {main}
+  thrown in C:\xampp\htdocs\Prueba_Tecnica_UCT\backend\models\Solicitud.php on line 82
+[21-Apr-2026 15:54:29 Europe/Berlin] PHP Fatal error:  Uncaught Error: Undefined constant "SQLSRV_ASSOC" in C:\xampp\htdocs\Prueba_Tecnica_UCT\backend\models\Solicitud.php:82
+Stack trace:
+#0 C:\xampp\htdocs\Prueba_Tecnica_UCT\backend\controllers\Solicitudcontroller.php(76): Solicitud->filtrar('', '', '3')
+#1 C:\xampp\htdocs\Prueba_Tecnica_UCT\backend\index.php(41): SolicitudController->filtrarSolicitudes()
+#2 {main}
+  thrown in C:\xampp\htdocs\Prueba_Tecnica_UCT\backend\models\Solicitud.php on line 82
+[21-Apr-2026 15:54:33 Europe/Berlin] PHP Fatal error:  Uncaught Error: Undefined constant "SQLSRV_ASSOC" in C:\xampp\htdocs\Prueba_Tecnica_UCT\backend\models\Solicitud.php:82
+Stack trace:
+#0 C:\xampp\htdocs\Prueba_Tecnica_UCT\backend\controllers\Solicitudcontroller.php(76): Solicitud->filtrar('', '', '3')
+#1 C:\xampp\htdocs\Prueba_Tecnica_UCT\backend\index.php(41): SolicitudController->filtrarSolicitudes()
+#2 {main}
+  thrown in C:\xampp\htdocs\Prueba_Tecnica_UCT\backend\models\Solicitud.php on line 82
+[21-Apr-2026 15:54:39 Europe/Berlin] PHP Fatal error:  Uncaught Error: Undefined constant "SQLSRV_ASSOC" in C:\xampp\htdocs\Prueba_Tecnica_UCT\backend\models\Solicitud.php:82
+Stack trace:
+#0 C:\xampp\htdocs\Prueba_Tecnica_UCT\backend\controllers\Solicitudcontroller.php(76): Solicitud->filtrar('', 'Pendiente', '3')
+#1 C:\xampp\htdocs\Prueba_Tecnica_UCT\backend\index.php(41): SolicitudController->filtrarSolicitudes()
+#2 {main}
+  thrown in C:\xampp\htdocs\Prueba_Tecnica_UCT\backend\models\Solicitud.php on line 82
+[21-Apr-2026 15:54:42 Europe/Berlin] PHP Fatal error:  Uncaught Error: Undefined constant "SQLSRV_ASSOC" in C:\xampp\htdocs\Prueba_Tecnica_UCT\backend\models\Solicitud.php:82
+Stack trace:
+#0 C:\xampp\htdocs\Prueba_Tecnica_UCT\backend\controllers\Solicitudcontroller.php(76): Solicitud->filtrar('', 'Pendiente', '3')
+#1 C:\xampp\htdocs\Prueba_Tecnica_UCT\backend\index.php(41): SolicitudController->filtrarSolicitudes()
+#2 {main}
+  thrown in C:\xampp\htdocs\Prueba_Tecnica_UCT\backend\models\Solicitud.php on line 82
+[21-Apr-2026 15:54:56 Europe/Berlin] PHP Fatal error:  Uncaught Error: Undefined constant "SQLSRV_ASSOC" in C:\xampp\htdocs\Prueba_Tecnica_UCT\backend\models\Solicitud.php:82
+Stack trace:
+#0 C:\xampp\htdocs\Prueba_Tecnica_UCT\backend\controllers\Solicitudcontroller.php(75): Solicitud->filtrar('', 'Pendiente', '3')
+#1 C:\xampp\htdocs\Prueba_Tecnica_UCT\backend\index.php(41): SolicitudController->filtrarSolicitudes()
+#2 {main}
+  thrown in C:\xampp\htdocs\Prueba_Tecnica_UCT\backend\models\Solicitud.php on line 82
+[21-Apr-2026 15:55:38 Europe/Berlin] PHP Fatal error:  Uncaught Error: Undefined constant "SQLSRV_ASSOC" in C:\xampp\htdocs\Prueba_Tecnica_UCT\backend\models\Solicitud.php:83
+Stack trace:
+#0 C:\xampp\htdocs\Prueba_Tecnica_UCT\backend\controllers\Solicitudcontroller.php(74): Solicitud->filtrar('', 'Pendiente', '3')
+#1 C:\xampp\htdocs\Prueba_Tecnica_UCT\backend\index.php(41): SolicitudController->filtrarSolicitudes()
+#2 {main}
+  thrown in C:\xampp\htdocs\Prueba_Tecnica_UCT\backend\models\Solicitud.php on line 83
+[21-Apr-2026 15:55:48 Europe/Berlin] PHP Fatal error:  Uncaught Error: Undefined constant "SQLSRV_ASSOC" in C:\xampp\htdocs\Prueba_Tecnica_UCT\backend\models\Solicitud.php:83
+Stack trace:
+#0 C:\xampp\htdocs\Prueba_Tecnica_UCT\backend\controllers\Solicitudcontroller.php(74): Solicitud->filtrar('', 'Pendiente', '3')
+#1 C:\xampp\htdocs\Prueba_Tecnica_UCT\backend\index.php(41): SolicitudController->filtrarSolicitudes()
+#2 {main}
+  thrown in C:\xampp\htdocs\Prueba_Tecnica_UCT\backend\models\Solicitud.php on line 83
+[21-Apr-2026 15:56:05 Europe/Berlin] PHP Fatal error:  Uncaught Error: Undefined constant "SQLSRV_ASSOC" in C:\xampp\htdocs\Prueba_Tecnica_UCT\backend\models\Solicitud.php:86
+Stack trace:
+#0 C:\xampp\htdocs\Prueba_Tecnica_UCT\backend\controllers\Solicitudcontroller.php(74): Solicitud->filtrar('', 'Pendiente', '3')
+#1 C:\xampp\htdocs\Prueba_Tecnica_UCT\backend\index.php(41): SolicitudController->filtrarSolicitudes()
+#2 {main}
+  thrown in C:\xampp\htdocs\Prueba_Tecnica_UCT\backend\models\Solicitud.php on line 86
+[21-Apr-2026 15:56:22 Europe/Berlin] PHP Fatal error:  Uncaught Error: Undefined constant "SQLSRV_ASSOC" in C:\xampp\htdocs\Prueba_Tecnica_UCT\backend\models\Solicitud.php:86
+Stack trace:
+#0 C:\xampp\htdocs\Prueba_Tecnica_UCT\backend\controllers\Solicitudcontroller.php(74): Solicitud->filtrar('', 'Pendiente', '3')
+#1 C:\xampp\htdocs\Prueba_Tecnica_UCT\backend\index.php(41): SolicitudController->filtrarSolicitudes()
+#2 {main}
+  thrown in C:\xampp\htdocs\Prueba_Tecnica_UCT\backend\models\Solicitud.php on line 86
+[21-Apr-2026 15:56:53 Europe/Berlin] PHP Fatal error:  Uncaught Error: Undefined constant "SQLSRV_ASSOC" in C:\xampp\htdocs\Prueba_Tecnica_UCT\backend\models\Solicitud.php:86
+Stack trace:
+#0 C:\xampp\htdocs\Prueba_Tecnica_UCT\backend\controllers\Solicitudcontroller.php(74): Solicitud->filtrar('', 'Pendiente', '3')
+#1 C:\xampp\htdocs\Prueba_Tecnica_UCT\backend\index.php(41): SolicitudController->filtrarSolicitudes()
+#2 {main}
+  thrown in C:\xampp\htdocs\Prueba_Tecnica_UCT\backend\models\Solicitud.php on line 86
+[21-Apr-2026 15:56:56 Europe/Berlin] PHP Fatal error:  Uncaught Error: Undefined constant "SQLSRV_ASSOC" in C:\xampp\htdocs\Prueba_Tecnica_UCT\backend\models\Solicitud.php:86
+Stack trace:
+#0 C:\xampp\htdocs\Prueba_Tecnica_UCT\backend\controllers\Solicitudcontroller.php(74): Solicitud->filtrar('', 'Pendiente', '3')
+#1 C:\xampp\htdocs\Prueba_Tecnica_UCT\backend\index.php(41): SolicitudController->filtrarSolicitudes()
+#2 {main}
+  thrown in C:\xampp\htdocs\Prueba_Tecnica_UCT\backend\models\Solicitud.php on line 86
+[21-Apr-2026 15:57:12 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: sqlsrv_fetch_array(): Argument #1 ($stmt) must be of type resource, bool given in C:\xampp\htdocs\Prueba_Tecnica_UCT\backend\models\Solicitud.php:86
+Stack trace:
+#0 C:\xampp\htdocs\Prueba_Tecnica_UCT\backend\models\Solicitud.php(86): sqlsrv_fetch_array(false, 2)
+#1 C:\xampp\htdocs\Prueba_Tecnica_UCT\backend\controllers\Solicitudcontroller.php(74): Solicitud->filtrar('', 'Pendiente', '3')
+#2 C:\xampp\htdocs\Prueba_Tecnica_UCT\backend\index.php(41): SolicitudController->filtrarSolicitudes()
+#3 {main}
+  thrown in C:\xampp\htdocs\Prueba_Tecnica_UCT\backend\models\Solicitud.php on line 86
+[21-Apr-2026 15:58:18 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: sqlsrv_fetch_array(): Argument #1 ($stmt) must be of type resource, bool given in C:\xampp\htdocs\Prueba_Tecnica_UCT\backend\models\Solicitud.php:86
+Stack trace:
+#0 C:\xampp\htdocs\Prueba_Tecnica_UCT\backend\models\Solicitud.php(86): sqlsrv_fetch_array(false, 2)
+#1 C:\xampp\htdocs\Prueba_Tecnica_UCT\backend\controllers\Solicitudcontroller.php(74): Solicitud->filtrar('', 'Pendiente', '3')
+#2 C:\xampp\htdocs\Prueba_Tecnica_UCT\backend\index.php(41): SolicitudController->filtrarSolicitudes()
+#3 {main}
+  thrown in C:\xampp\htdocs\Prueba_Tecnica_UCT\backend\models\Solicitud.php on line 86

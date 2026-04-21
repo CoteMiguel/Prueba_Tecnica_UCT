@@ -5,6 +5,10 @@ document.addEventListener("DOMContentLoaded", async function () {
     logout();
     addSolicitud();
     cargarSolicitudes();
+
+    document.getElementById("inputBuscar").addEventListener("input", aplicarFiltros);
+    document.getElementById("filtroEstado").addEventListener("change", aplicarFiltros);
+    document.getElementById("filtroTipo").addEventListener("change", aplicarFiltros);
 });
 
 function aplicarPermisos(permisos) {
@@ -101,6 +105,7 @@ function logout() {
         }
     });
 }
+
 async function addSolicitud() {
     try {
         const form = document.getElementById("formNuevaSolicitud");
@@ -135,11 +140,11 @@ async function addSolicitud() {
         console.error("Error guardando solicitud:", error);
     }
 }
+
 async function cargarSolicitudes() {
     try {
         const response = await fetch("../backend/index.php?action=listarSolicitudes");
         const data = await response.json();
-        console.log(data);
         const tabla = document.getElementById("tablaSolicitudes");
         tabla.innerHTML = "";
 
@@ -184,6 +189,7 @@ async function cargarSolicitudes() {
         console.error("Error cargando solicitudes:", error);
     }
 }
+
 function activarBotonesEditar() {
     document.querySelectorAll(".btnEditar").forEach(btn => {
         btn.addEventListener("click", () => {
@@ -206,3 +212,72 @@ function activarBotonesEditar() {
         });
     });
 }
+
+async function aplicarFiltros() {
+    console.log("algo");
+    const buscar = document.getElementById("inputBuscar").value.trim();
+    const estado = document.getElementById("filtroEstado").value;
+    const tipo = document.getElementById("filtroTipo").value;
+
+    console.log(buscar)
+    console.log(estado)
+    console.log(tipo)
+    try {
+        const response = await fetch("../backend/index.php?action=filtrarSolicitudes", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ buscar, estado, tipo })
+        });
+        const data = await response.json();
+        console.log(data)
+        renderSolicitudes(data);
+    } catch (error) {
+        console.error("Error aplicando filtros:", error);
+    }
+}
+
+function renderSolicitudes(data) {
+    
+    const tabla = document.getElementById("tablaSolicitudes");
+    tabla.innerHTML = "";
+
+    if (!data || data.length === 0) {
+        tabla.innerHTML = `<tr><td colspan="7" class="text-center text-muted">No hay solicitudes</td></tr>`;
+        return;
+    }
+
+    data.forEach(solicitud => {
+        let acciones = "";
+        if (window.permisosUsuario.editar === "1") {
+            acciones += `
+                    <button 
+                        class="btn btn-sm btn-outline-primary btnEditar" 
+                        data-id="${solicitud.id_solicitud}" 
+                        data-solicitante="${solicitud.solicitante}" 
+                        data-tipo="${solicitud.tipo}" 
+                        data-id-tipo="${solicitud.id_tipo}" 
+                        data-descripcion="${solicitud.descripcion}" 
+                        data-estado="${solicitud.estado}">
+                            <i class="bi bi-pencil"></i>
+                    </button>`;
+        }
+        if (window.permisosUsuario.eliminar === "1") {
+            acciones += `<button class="btn btn-sm btn-outline-danger"><i class="bi bi-trash"></i></button>`;
+        }
+        const fila = `
+                <tr>
+                <td>${solicitud.id_solicitud}</td>
+                <td>${solicitud.solicitante}</td>
+                <td>${solicitud.tipo}</td>
+                <td>${solicitud.descripcion}</td>
+                <td>${solicitud.estado}</td>
+                <td>${solicitud.fecha_creacion}</td>
+                <td class="text-center">${acciones}</td>
+                </tr>
+            `;
+        tabla.insertAdjacentHTML("beforeend", fila);
+    });
+    activarBotonesEditar();
+}
+
+

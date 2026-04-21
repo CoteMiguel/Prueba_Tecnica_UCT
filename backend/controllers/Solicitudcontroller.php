@@ -61,4 +61,18 @@ class SolicitudController
                 : ["success" => false, "msg" => "Error al actualizar"]
         );
     }
+
+    public function filtrarSolicitudes()
+    {
+        $json = file_get_contents("php://input");
+        $data = json_decode($json, true);
+
+        $buscar = $data['buscar'] ?? '';
+        $estado = $data['estado'] ?? '';
+        $tipo   = $data['tipo'] ?? '';
+
+        $result = $this->solicitudModel->filtrar($buscar, $estado, $tipo);
+
+        echo json_encode($result);
+    }
 }
