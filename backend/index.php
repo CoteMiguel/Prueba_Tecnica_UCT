@@ -6,12 +6,13 @@ session_start();
 require_once __DIR__ . '/config/conexion.php';
 require_once __DIR__ . '/controllers/AuthController.php';
 require_once __DIR__ . '/controllers/TipoSolicitudController.php';
+require_once __DIR__ . '/controllers/Solicitudcontroller.php';
 
 $conn = Database::conexion();
 
 $controllerAuth = new AuthController($conn);
 $controllerTipo = new TipoSolicitudController($conn);
-
+$solicitudController = new Solicitudcontroller($conn);
 $action = $_GET['action'] ?? '';
 
 switch ($action) {
@@ -26,6 +27,9 @@ switch ($action) {
 
     case 'listarTipos':
         $controllerTipo->listarTipoSolicitud();
+        break;
+    case 'crearSolicitud':
+        $solicitudController->crearSolicitud();
         break;
 
     default:

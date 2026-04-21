@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", async function () {
     cargarTiposSolicitud();
     openModal();
     logout();
-
+    addSolicitud();
 
 });
 
@@ -67,4 +67,34 @@ function logout() {
             window.location.href = 'index.html';
         }
     });
+}
+async function addSolicitud() {
+    try {
+        const form = document.getElementById("formNuevaSolicitud");
+
+        form.addEventListener("submit", (e) => {
+            e.preventDefault();
+
+            const datos = {
+                solicitanteId: document.getElementById("solicitanteId").value,
+                solicitante: document.getElementById("solicitante").value,
+                tipo: document.getElementById("TipoModal").value,
+                descripcion: document.getElementById("descripcion").value,
+                estado: document.getElementById("estado").value
+            };
+
+            fetch("../backend/index.php?action=crearSolicitud", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(datos)
+            })
+                .then(res => res.json())
+                .then(data => {
+                    console.log("Respuesta del backend:", data);
+                })
+                .catch(err => console.error("Error guardando solicitud:", err));
+        });
+    } catch (error) {
+        console.error("Error cargando tipos:", error);
+    }
 }
