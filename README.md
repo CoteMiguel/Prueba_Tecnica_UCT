@@ -8,11 +8,9 @@ Este proyecto corresponde a la Prueba Técnica – Desarrollador/a de la Direcci
 - [Requisitos Previos](#-requisitos-previos)
 - [Instalación](#-instalación)
 - [Estructura del Proyecto](#-estructura-del-proyecto)
-- [API REST](#-api-rest)
 - [Funcionalidades](#-funcionalidades)
 - [Usuarios de Prueba](#-usuarios-de-prueba)
 - [Decisiones Técnicas](#-decisiones-técnicas)
-- [Supuestos y Limitaciones](#-supuestos-y-limitaciones)
 
 ---
 
@@ -24,6 +22,75 @@ Este proyecto corresponde a la Prueba Técnica – Desarrollador/a de la Direcci
 | SQL Server | 2019 o superior |
 | Servidor Web | Apache 2.4+ (XAMPP recomendado) |
 | Extensión PHP | `sqlsrv` y `pdo_sqlsrv` |
+
+## Instalación
+
+### 1. Clonar el repositorio
+
+```bash
+git clone https://github.com/TU_USUARIO/Prueba_Tecnica_UCT.git
+cd Prueba_Tecnica_UCT
+```
+
+### 2. Configurar la base de datos
+
+#### 2.1. Crear usuario SQL Server
+
+Conectarse con el usuario `sa` y ejecutar:
+
+```sql
+USE master;
+GO
+
+CREATE LOGIN UCT WITH PASSWORD = 'PWD1234-';
+GO
+
+CREATE USER UCT FOR LOGIN UCT;
+GO
+```
+
+#### 2.2. Ejecutar el script de base de datos
+
+```bash
+sqlcmd -S localhost -U sa -P TU_PASSWORD -i database/schema.sql
+```
+
+O desde SQL Server Management Studio (SSMS):
+1. Abrir `database/schema.sql`
+2. Ejecutar (F5)
+
+Esto creará:
+- Base de datos `prueba_tecnica`
+- 7 tablas con relaciones
+- Datos iniciales (roles, módulos, tipos de solicitud)
+- 3 usuarios de prueba
+
+### 3. Configurar la aplicación
+
+Editar `backend/config/conexion.php` si es necesario:
+
+```php
+$serverName = "localhost";
+$conexion = [
+    "Database" => "prueba_tecnica",
+    "UID" => "UCT",
+    "PWD" => "PWD1234-",
+    "CharacterSet" => "UTF-8"
+];
+```
+
+También se pueden usar variables de entorno.
+
+### 4. Configurar Apache (XAMPP)
+
+Copiar el proyecto a `C:\xampp\htdocs\Prueba_Tecnica_UCT`
+
+Acceder desde el navegador:
+```
+http://localhost/Prueba_Tecnica_UCT/frontend/index.html
+```
+
+---
 
 ## Estructura del Proyecto
 
@@ -248,6 +315,7 @@ El script `database/schema.sql` crea automáticamente 3 usuarios:
 - Suficiente precisión para este caso de uso
 
 ---
+
 ## Licencia
 
 Este proyecto fue desarrollado como parte de una prueba técnica para la Universidad Católica de Temuco.
