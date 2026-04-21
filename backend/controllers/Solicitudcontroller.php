@@ -38,4 +38,27 @@ class SolicitudController
         $solicitudes = $this->solicitudModel->listar();
         echo json_encode($solicitudes);
     }
+    public function actualizarSolicitud()
+    {
+        $json = file_get_contents("php://input");
+        $data = json_decode($json, true);
+
+        $idSolicitud = $data['id_solicitud'] ?? null;
+        $idTipo      = $data['tipo'] ?? null;
+        $descripcion = $data['descripcion'] ?? null;
+        $estado      = $data['estado'] ?? null;
+
+        if (!$idSolicitud || !$idTipo || !$descripcion || !$estado) {
+            echo json_encode(["success" => false, "msg" => "Campos obligatorios"]);
+            return;
+        }
+
+        $ok = $this->solicitudModel->actualizar($idSolicitud, $idTipo, $descripcion, $estado);
+
+        echo json_encode(
+            $ok
+                ? ["success" => true, "msg" => "Solicitud actualizada"]
+                : ["success" => false, "msg" => "Error al actualizar"]
+        );
+    }
 }

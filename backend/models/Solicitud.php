@@ -26,6 +26,7 @@ class Solicitud
         $sql = "SELECT 
                 s.id_solicitud,
                 u.nombre + ' ' + u.apellido_paterno AS solicitante,
+                t.id_tiso as id_tipo,
                 t.nombre AS tipo,
                 s.descripcion,
                 s.estado,
@@ -41,5 +42,15 @@ class Solicitud
             $result[] = $row;
         }
         return $result;
+    }
+    public function actualizar($idSolicitud, $idTipo, $descripcion, $estado)
+    {
+        $sql = "UPDATE solicitudes 
+            SET id_tiso = ?, descripcion = ?, estado = ?, fecha_actualizacion = GETDATE()
+            WHERE id_solicitud = ?";
+        $params = [$idTipo, $descripcion, $estado, $idSolicitud];
+        $stmt = sqlsrv_query($this->conn, $sql, $params);
+
+        return $stmt ? true : false;
     }
 }
