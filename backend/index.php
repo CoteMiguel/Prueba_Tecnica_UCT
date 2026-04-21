@@ -31,6 +31,9 @@ switch ($action) {
     case 'crearSolicitud':
         $solicitudController->crearSolicitud();
         break;
+    case 'listarSolicitudes':
+        $solicitudController->listarSolicitudes();
+        break;
 
     default:
         echo json_encode(["msg" => "Ruta no válida"]);

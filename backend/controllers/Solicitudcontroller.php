@@ -1,14 +1,17 @@
 <?php
 require_once __DIR__ . '/../models/Solicitud.php';
 
-class SolicitudController {
+class SolicitudController
+{
     private $solicitudModel;
 
-    public function __construct($conn) {
+    public function __construct($conn)
+    {
         $this->solicitudModel = new Solicitud($conn);
     }
 
-    public function crearSolicitud() {
+    public function crearSolicitud()
+    {
         $json = file_get_contents("php://input");
         $data = json_decode($json, true);
 
@@ -29,5 +32,10 @@ class SolicitudController {
         } else {
             echo json_encode(["success" => false, "msg" => "Error al guardar"]);
         }
+    }
+    public function listarSolicitudes()
+    {
+        $solicitudes = $this->solicitudModel->listar();
+        echo json_encode($solicitudes);
     }
 }

@@ -4,8 +4,25 @@ document.addEventListener("DOMContentLoaded", async function () {
     openModal();
     logout();
     addSolicitud();
-
+    cargarSolicitudes();
 });
+function aplicarPermisos(permisos) {
+    const btnNueva = document.getElementById("btnNuevaSolicitud");
+    if (permisos.crear === "1") {
+        btnNueva.style.display = "inline-block";
+    } else {
+        btnNueva.style.display = "none";
+    }
+    window.permisosUsuario = permisos;
+    // editar = 1 y borrar = 0 muestra solo si cuando ambos sean 0 no muestra nada de acciones
+    const colAcciones = document.getElementById("colAcciones");
+    if (permisos.editar === "0" && permisos.eliminar === "0") {
+        colAcciones.style.display = "none";
+    } else {
+        colAcciones.style.display = "table-cell";
+    }
+}
+
 
 async function cargarTiposSolicitud() {
     try {
@@ -44,6 +61,7 @@ async function session() {
             document.getElementById("solicitante").value = data.nombre;
             document.getElementById("solicitanteId").value = data.id;
         }
+        aplicarPermisos(data.permisos);
 
     } catch (error) {
         console.error("Error cargando tipos:", error);
@@ -72,29 +90,69 @@ async function addSolicitud() {
     try {
         const form = document.getElementById("formNuevaSolicitud");
 
-        form.addEventListener("submit", (e) => {
+        form.addEventListener("submit", async (e) => {
             e.preventDefault();
 
             const datos = {
                 solicitanteId: document.getElementById("solicitanteId").value,
-                solicitante: document.getElementById("solicitante").value,
                 tipo: document.getElementById("TipoModal").value,
                 descripcion: document.getElementById("descripcion").value,
                 estado: document.getElementById("estado").value
             };
 
-            fetch("../backend/index.php?action=crearSolicitud", {
+            const response = await fetch("../backend/index.php?action=crearSolicitud", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify(datos)
-            })
-                .then(res => res.json())
-                .then(data => {
-                    console.log("Respuesta del backend:", data);
-                })
-                .catch(err => console.error("Error guardando solicitud:", err));
+            });
+            const data = await response.json();
+            if (data.success) {
+                const modal = bootstrap.Modal.getInstance(document.getElementById("modalNuevaSolicitud"));
+                modal.hide();
+                cargarSolicitudes();
+            } else {
+                alert("Error: " + data.msg);
+            }
         });
     } catch (error) {
-        console.error("Error cargando tipos:", error);
+        console.error("Error guardando solicitud:", error);
+    }
+}
+async function cargarSolicitudes() {
+    try {
+        const response = await fetch("../backend/index.php?action=listarSolicitudes");
+        const data = await response.json();
+        console.log(data);
+        const tabla = document.getElementById("tablaSolicitudes");
+        tabla.innerHTML = "";
+
+        if (data.length === 0) {
+            tabla.innerHTML = `<tr><td colspan="7" class="text-center text-muted">No hay solicitudes registradas</td></tr>`;
+            return;
+        }
+        let acciones = "";
+
+        if (window.permisosUsuario.editar === "1") {
+            acciones += `<button class="btn btn-sm btn-outline-primary"><i class="bi bi-pencil"></i></button> `;
+        }
+        if (window.permisosUsuario.eliminar === "1") {
+            acciones += `<button class="btn btn-sm btn-outline-danger"><i class="bi bi-trash"></i></button>`;
+        }
+        data.forEach(solicitud => {
+            const fila = `
+                <tr>
+                <td>${solicitud.id_solicitud}</td>
+                <td>${solicitud.solicitante}</td>
+                <td>${solicitud.tipo}</td>
+                <td>${solicitud.descripcion}</td>
+                <td>${solicitud.estado}</td>
+                <td>${solicitud.fecha_creacion}</td>
+                <td class="text-center">${acciones}</td>
+                </tr>
+            `;
+            tabla.insertAdjacentHTML("beforeend", fila);
+        });
+    } catch (error) {
+        console.error("Error cargando solicitudes:", error);
     }
 }
